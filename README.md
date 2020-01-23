@@ -15,7 +15,7 @@ Boot the Raspian image on your Pi. Sign in to your Pi. Use raspi-config and enab
 SSH into your Pi
 
                     
-ssh pi@192.168.1.10 # replace this address with the address of your Pi
+                        ssh pi@192.168.1.10 # replace this address with the address of your Pi
                     
                 
 Run the following commands to update your Pi and install some utilities
