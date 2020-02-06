@@ -1,0 +1,24 @@
+diff -Naur openfst-1.3.4/src/include/fst/replace.h openfst-1.3.4.1/src/include/fst/replace.h
+--- openfst-1.3.4/src/include/fst/replace.h	2013-01-24 02:36:24.000000000 +0000
++++ openfst-1.3.4.1/src/include/fst/replace.h	2020-01-22 21:32:50.170238427 +0000
+@@ -1066,7 +1066,7 @@
+ 
+     // If state is already cached, use cached arcs array.
+     if (fst_.GetImpl()->HasArcs(state_)) {
+-      (fst_.GetImpl())->template CacheImpl<A>::InitArcIterator(state_,
++      (fst_.GetImpl())->CacheImpl<A>::InitArcIterator(state_,
+                                                                &cache_data_);
+       num_arcs_ = cache_data_.narcs;
+       arcs_ = cache_data_.arcs;      // 'arcs_' is a ptr to the cached arcs.
+diff -Naur openfst-1.3.4/src/script/text-io.cc openfst-1.3.4.1/src/script/text-io.cc
+--- openfst-1.3.4/src/script/text-io.cc	2013-01-24 02:36:26.000000000 +0000
++++ openfst-1.3.4.1/src/script/text-io.cc	2020-01-22 21:33:31.120276129 +0000
+@@ -84,7 +84,7 @@
+   if (!*strm)
+     LOG(ERROR) << "WritePotentials: Write failed: "
+                << (filename.empty() ? "standard output" : filename);
+-  bool ret = *strm;
++  bool ret = !strm->fail();
+   if (strm != &cout)
+     delete strm;
+   return ret;
