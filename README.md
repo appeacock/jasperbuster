@@ -1,7 +1,7 @@
 Credit: Steve Kuekes
 
-# Jasper on Raspian Buster Software Installation Guide
-I completed this install process on a Raspberry Pi Model 3 B+ using the Raspian Buster Lite ISO. I used a USB microphone and speakers that plug into the audio jack.
+# Jasper on Raspbian Buster Software Installation Guide
+I completed this install process on a Raspberry Pi Model 3 B+ using the Raspbian Buster Lite ISO. I used a USB microphone and speakers that plug into the audio jack.
 
 I don't see any reason it wouldn't work on a Pi Mode 4. I'll work on getting one of these for testing
 
@@ -9,7 +9,7 @@ I don't see any reason it wouldn't work on a Pi Mode 4. I'll work on getting one
 This install uses pocketsphinx for the speech to text and festival for text to speech. This means you aren't sharing your audio with any outside services
 
 
-# Burn Raspian Buster image onto SD Card
+# Burn Raspbian Buster image onto SD Card
 Boot the Raspian image on your Pi. Sign in to your Pi. Use raspi-config and enable the network adapter or wireless according to your needs. Also, enable SSH. Plug in your microphone and speakers. Restart your Pi.
 
 SSH into your Pi
