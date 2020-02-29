@@ -36,13 +36,13 @@ Plug in the microphone and speakers then restart the Pi.
 * To record: `$ arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`
 * To playback: `$ aplay -D hw:1,0 test.wav`
 
-Edit and source `.bash_profile`::
+#### Edit and source `.bash_profile`::
     $ touch .bash_profile && cat>>.bash_profile<<EOF
     export LD_LIBRARY_PATH="/usr/local/lib"
     EOF
     $ source .bash_profile
 
-Edit and source `.bashrc`:
+#### Edit and source `.bashrc`:
     $ touch .bashrc && cat>>.bashrc<<EOF
     LD_LIBRARY_PATH="/usr/local/lib""
     export LD_LIBRARY_PATH
