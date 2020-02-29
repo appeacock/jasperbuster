@@ -29,23 +29,20 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
     $ sudo shutdown -r now
 
 # Test the microphone and speakers:
-    $ alsamixer
-
-# To use:
-* Press F6 to select microphone
-* Press F4 to capture
+* To start alsamixer: `$ alsamixer`
+* Press `F6` to select microphone
+* Press `F4` to capture
 * Press up arrow to increase microphone gain
 * To record: `arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`
 * To playback: `aplay -D hw:1,0 test.wav`
 
+Edit and source `.bash_profile`:
     $ touch .bash_profile && cat>>.bash_profile<<EOF
     export LD_LIBRARY_PATH="/usr/local/lib"
     EOF
-    $ source .bashrc
-                    
-                
-Edit your .bashrc file using the following command. Scroll to the bottom of the file
+    $ source .bash_profile
 
+Edit and source `.bashrc`:
     $ touch .bashrc && cat>>.bashrc<<EOF
     LD_LIBRARY_PATH="/usr/local/lib"
     export LD_LIBRARY_PATH
@@ -54,9 +51,8 @@ Edit your .bashrc file using the following command. Scroll to the bottom of the 
     EOF
     $ source .bashrc
 
-# Get the jasper code
+# Download and patch the jasper code
     $ git clone https://github.com/jasperproject/jasper-client.git jasper
-Download and install a patch to the Jasper source
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/jasper.patch
     cd jasper
     patch -p1 < ../jasper.patch
