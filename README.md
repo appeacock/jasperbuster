@@ -32,12 +32,13 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
     $ alsamixer
 
 # To use:
-Press F6 to select microphone
-Press F4 to capture
-Press up arrow to increase microphone gain
-To record: `arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`
-To playback: `aplay -D hw:1,0 test.wav`
-    touch .bash_profile && 
+Press F6 to select microphone\n
+Press F4 to capture\n
+Press up arrow to increase microphone gain\n
+To record: `arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`\n
+To playback: `aplay -D hw:1,0 test.wav`\n
+
+    $ touch .bash_profile && cat>>.bash_profile<<EOF
     export LD_LIBRARY_PATH="/usr/local/lib"
     EOF
     $ source .bashrc
@@ -51,29 +52,19 @@ Edit your .bashrc file using the following command. Scroll to the bottom of the 
     PATH=$PATH:/usr/local/lib/
     export PATH
     EOF
+    $ source .bashrc
 
-Sign out of the raspberry pi and ssh back in to have the bash scripts run
+# Get the jasper code
+    $ git clone https://github.com/jasperproject/jasper-client.git jasper
+Download and install a patch to the Jasper source
+    $ wget http://www.kuekes.com/jasper.patch
+    cd jasper
+    patch -p1 < ../jasper.patch
+    cd ..
 
-After signing back in download the jasper source using the following command
-
-                    
-                        git clone https://github.com/jasperproject/jasper-client.git jasper
-                    
-                
-Download and apply the following patch to the Jasper source
-
-                    
-                        wget http://www.kuekes.com/jasper.patch 
-                        cd jasper
-                        patch -p1 < ../jasper.patch
-                        cd ..
-                    
-                
 Install needed Python libraries
-
-                    
-                        sudo pip install --upgrade setuptools
-                        sudo pip install -r jasper/client/requirements.txt        #### this takes a while
+    $ sudo pip install --upgrade setuptools
+    $ sudo pip install -r jasper/client/requirements.txt        #### this takes a while
                     
                 
 Create the Jasper profile
