@@ -1,26 +1,18 @@
 Credit: Steve Kuekes
 
 # Jasper on Raspian Buster Software Installation Guide
-I completed this install process on a Raspberry Pi Model 3 B+ using the Raspian Buster Lite ISO. I used a USB microphone and speakers that plug into the audio jack.
-
-I don't see any reason it wouldn't work on a Pi Mode 4. I'll work on getting one of these for testing
-
-
-This install uses pocketsphinx for the speech to text and festival for text to speech. This means you aren't sharing your audio with any outside services
+This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using the Raspian Buster Lite ISO (https://downloads.raspberrypi.org/raspbian_lite_latest). This tutorial used a USB microphone and speakers that plug into the audio jack and uses pocketsphinx for the speech to text and festival for text to speech. This method is fairly secure in that there is no traffic sent to 3rd parties.
 
 
 # Burn Raspian Buster image onto SD Card
-Boot the Raspian image on your Pi. Sign in to your Pi. Use raspi-config and enable the network adapter or wireless according to your needs. Also, enable SSH. Plug in your microphone and speakers. Restart your Pi.
+Boot the Raspian image on the RPi device and sign in.
+Use `raspi-config` to enable the network adapter or wireless as needed and enable SSH to make thigns easier.
+Plug in the microphone and speakers then restart the Pi.
 
-SSH into your Pi
+ssh pi@<ip-address> # replace this address with the address of your Pi
 
-                    
-                        ssh pi@192.168.1.10 # replace this address with the address of your Pi
-                    
-                
 Run the following commands to update your Pi and install some utilities
 
-                    
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
