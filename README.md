@@ -21,7 +21,7 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
 
 
 # Create/edit an ALSA configuration file:
-    $ touch /lib/modprobe.d/jasper.conf && cat /lib/modprobe.d/jasper.conf<<EOF
+    $ touch /lib/modprobe.d/jasper.conf && cat>>/lib/modprobe.d/jasper.conf<<EOF
     #Loads USB audio before the internal soundcard
     options snd_usb_audio index=0
     options snd_bcm2835
