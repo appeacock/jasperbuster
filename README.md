@@ -33,8 +33,8 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
 * Press `F6` to select microphone
 * Press `F4` to capture
 * Press up arrow to increase microphone gain
-* To record: `arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`
-* To playback: `aplay -D hw:1,0 test.wav`
+* To record: `$ arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`
+* To playback: `$ aplay -D hw:1,0 test.wav`
 
 Edit and source `.bash_profile`:
     $ touch .bash_profile && cat>>.bash_profile<<EOF
@@ -51,12 +51,12 @@ Edit and source `.bashrc`:
     EOF
     $ source .bashrc
 
-# Download and patch the jasper code
-    $ git clone https://github.com/jasperproject/jasper-client.git jasper
+# The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017. This tutorial uses a forked repo:
+    $ git clone https://github.com/aplawson/jasper-client.git jasper
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/jasper.patch
-    cd jasper
-    patch -p1 < ../jasper.patch
-    cd ..
+    $ cd jasper
+    $ patch -p1 < ../jasper.patch
+    $ cd ..
 
 Install needed Python libraries
     $ sudo pip install --upgrade setuptools
