@@ -57,7 +57,7 @@ Edit your .bashrc file using the following command. Scroll to the bottom of the 
 # Get the jasper code
     $ git clone https://github.com/jasperproject/jasper-client.git jasper
 Download and install a patch to the Jasper source
-    $ wget http://www.kuekes.com/jasper.patch
+    $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/jasper.patch
     cd jasper
     patch -p1 < ../jasper.patch
     cd ..
