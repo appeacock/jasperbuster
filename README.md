@@ -18,38 +18,22 @@ Run the following commands to update your Pi and install some utilities
     sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
     sudo apt-get install python-setuptools
     sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
-                    
-                
-Create an ALSA configuration file using
 
-                    
-                        nano /lib/modprobe.d/jasper.conf
-                    
-                
-add the following lines to the file
 
-                    
-                        # Load USB audio before the internal soundcard
-                        options snd_usb_audio index=0
-                        options snd_bcm2835 
+#Create/edit an ALSA configuration file:
+    $ touch /lib/modprobe.d/jasper.conf && cat /lib/modprobe.d/jasper.conf<<EOF
+    #Loads USB audio before the internal soundcard
+    options snd_usb_audio index=0
+    options snd_bcm2835
+    #Makes sure the sound cards are ordered the correct way in ALSA
+    options snd slots=snd_usb_audio,snd_bcm2835
+    EOF
+    $ sudo shutdown -r now
 
-                        # Make sure the sound cards are ordered the correct way in ALSA
-                        options snd slots=snd_usb_audio,snd_bcm2835                    
-                    
-                
-Save the file and restart your Pi
+# To test the microphone and speakers, run alsamixer:
+    $ alsamixer
 
-                    
-                        sudo shutdown -r now
-                    
-                
-SSH back into your Pi. Test your microphone and speakers. Run alsamixer
-
-                    
-                        alsamixer
-                    
-                
-Press f6 and select usb microphone, Press F4 capture and press up arrow to increase microphone gain
+# Press f6 and select usb microphone, Press F4 capture and press up arrow to increase microphone gain
 
 Test your microphone works by recording a message. Run the arecord command, speak a test message, end with ctrl-C
 
