@@ -32,11 +32,11 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
     $ alsamixer
 
 # To use:
-Press F6 to select microphone\n
-Press F4 to capture\n
-Press up arrow to increase microphone gain\n
-To record: `arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`\n
-To playback: `aplay -D hw:1,0 test.wav`\n
+*Press F6 to select microphone\n
+*Press F4 to capture\n
+*Press up arrow to increase microphone gain\n
+*To record: `arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`\n
+*To playback: `aplay -D hw:1,0 test.wav`\n
 
     $ touch .bash_profile && cat>>.bash_profile<<EOF
     export LD_LIBRARY_PATH="/usr/local/lib"
