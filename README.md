@@ -11,7 +11,7 @@ Plug in the microphone and speakers then restart the Pi.
 
 ssh pi@<ip-address> # replace this address with the address of your Pi
 
-Run the following commands to update your Pi and install some utilities
+# Update the Pi and install some utilities
 
     sudo apt-get update
     sudo apt-get upgrade
@@ -20,7 +20,7 @@ Run the following commands to update your Pi and install some utilities
     sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
 
 
-#Create/edit an ALSA configuration file:
+# Create/edit an ALSA configuration file:
     $ touch /lib/modprobe.d/jasper.conf && cat /lib/modprobe.d/jasper.conf<<EOF
     #Loads USB audio before the internal soundcard
     options snd_usb_audio index=0
