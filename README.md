@@ -9,7 +9,7 @@ Boot the Raspian image on the RPi device and sign in.
 Use `raspi-config` to enable the network adapter or wireless as needed and enable SSH to make thigns easier.
 Plug in the microphone and speakers then restart the Pi.
 
-ssh pi@<ip-address> # replace this address with the address of your Pi
+    $ ssh pi@<ip-address> # replace this address with the address of your Pi
 
 # Update and install some utilities
     sudo apt-get update
@@ -51,7 +51,8 @@ Edit and source `.bashrc`:
     EOF
     $ source .bashrc
 
-# The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017. This tutorial uses a forked repo:
+### The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017.
+### This tutorial uses a forked repo:
     $ git clone https://github.com/aplawson/jasper-client.git jasper
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/jasper.patch
     $ cd jasper
