@@ -32,45 +32,26 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
     $ alsamixer
 
 # To use:
-### Press f6 and select usb microphone
-### Press F4 to capture
-### Press up arrow to increase microphone gain
-To record: `arecord test.wav`, speak into the microphone, end with Ctrl+C
-
-Play back your recorded message
-
-                    
-                        aplay -D hw:1,0 test.wav
-                    
-                
-Create a .bash_profile
-
-                    
-                        nano .bash_profile
-                    
-                
-And add the following lines into it
-
-                    
-                        export LD_LIBRARY_PATH="/usr/local/lib"
-                        source .bashrc
+Press F6 to select microphone
+Press F4 to capture
+Press up arrow to increase microphone gain
+To record: `arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`
+To playback: `aplay -D hw:1,0 test.wav`
+    touch .bash_profile && 
+    export LD_LIBRARY_PATH="/usr/local/lib"
+    EOF
+    $ source .bashrc
                     
                 
 Edit your .bashrc file using the following command. Scroll to the bottom of the file
 
-                    
-                        nano .bashrc
-                    
-                
-And add the following lines at the end of the file
+    $ touch .bashrc && cat>>.bashrc<<EOF
+    LD_LIBRARY_PATH="/usr/local/lib"
+    export LD_LIBRARY_PATH
+    PATH=$PATH:/usr/local/lib/
+    export PATH
+    EOF
 
-                    
-                        LD_LIBRARY_PATH="/usr/local/lib"
-                        export LD_LIBRARY_PATH
-                        PATH=$PATH:/usr/local/lib/
-                        export PATH
-                    
-                
 Sign out of the raspberry pi and ssh back in to have the bash scripts run
 
 After signing back in download the jasper source using the following command
