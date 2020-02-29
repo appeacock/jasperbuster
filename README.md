@@ -1,26 +1,24 @@
-Credit: Steve Kuekes
+Original tutorial credit: Steve Kuekes (also a contributor)
 
 # Jasper on Raspian Buster Software Installation Guide
 This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using the Raspian Buster Lite ISO (https://downloads.raspberrypi.org/raspbian_lite_latest). This tutorial used a USB microphone and speakers that plug into the audio jack and uses pocketsphinx for the speech to text and festival for text to speech. This method is fairly secure in that there is no traffic sent to 3rd parties.
 
 
-# Burn Raspian Buster image onto SD Card
+# Burn image onto SD Card
 Boot the Raspian image on the RPi device and sign in.
 Use `raspi-config` to enable the network adapter or wireless as needed and enable SSH to make thigns easier.
 Plug in the microphone and speakers then restart the Pi.
 
 ssh pi@<ip-address> # replace this address with the address of your Pi
 
-# Update the Pi and install some utilities
-
+# Update and install some utilities
     sudo apt-get update
     sudo apt-get upgrade
     sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
     sudo apt-get install python-setuptools
     sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
 
-
-# Create/edit an ALSA configuration file:
+# Create/edit ALSA configuration file:
     $ touch /lib/modprobe.d/jasper.conf && cat>>/lib/modprobe.d/jasper.conf<<EOF
     #Loads USB audio before the internal soundcard
     options snd_usb_audio index=0
@@ -30,11 +28,13 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
     EOF
     $ sudo shutdown -r now
 
-# To test the microphone and speakers, run alsamixer:
+# Test the microphone and speakers:
     $ alsamixer
 
-# Press f6 and select usb microphone, Press F4 capture and press up arrow to increase microphone gain
-
+## To use:
+## Press f6 and select usb microphone
+## Press F4 to capture
+## Press up arrow to increase microphone gain
 Test your microphone works by recording a message. Run the arecord command, speak a test message, end with ctrl-C
 
                     
