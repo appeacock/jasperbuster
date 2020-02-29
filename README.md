@@ -13,11 +13,11 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
 
 Run the following commands to update your Pi and install some utilities
 
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
-sudo apt-get install python-setuptools
-sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
+    sudo apt-get update
+    sudo apt-get upgrade
+    sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
+    sudo apt-get install python-setuptools
+    sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
                     
                 
 Create an ALSA configuration file using
