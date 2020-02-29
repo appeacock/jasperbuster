@@ -31,16 +31,12 @@ ssh pi@<ip-address> # replace this address with the address of your Pi
 # Test the microphone and speakers:
     $ alsamixer
 
-## To use:
-## Press f6 and select usb microphone
-## Press F4 to capture
-## Press up arrow to increase microphone gain
-Test your microphone works by recording a message. Run the arecord command, speak a test message, end with ctrl-C
+# To use:
+### Press f6 and select usb microphone
+### Press F4 to capture
+### Press up arrow to increase microphone gain
+To record: `arecord test.wav`, speak into the microphone, end with Ctrl+C
 
-                    
-                        arecord test.wav
-                    
-                
 Play back your recorded message
 
                     
