@@ -12,11 +12,11 @@ Plug in the microphone and speakers then restart the Pi.
     $ ssh pi@<ip-address> # replace this address with the address of your Pi
 
 # Update and install some utilities
-    sudo apt-get update
-    sudo apt-get upgrade
-    sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
-    sudo apt-get install python-setuptools
-    sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
+    $ sudo apt-get update
+    $ sudo apt-get upgrade
+    $ sudo apt-get install nano git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
+    $ sudo apt-get install python-setuptools
+    $ sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
 
 # Create/edit ALSA configuration file:
     $ touch /lib/modprobe.d/jasper.conf && cat>>/lib/modprobe.d/jasper.conf<<EOF
@@ -134,7 +134,7 @@ Create the Jasper profile
 # Final edits the Jasper profile.yml
     $ cd .jasper
     $ vi profile.yml
-
+    
 ### Update the profile as shown. X's and 1's represent private user-specific information. It could already be set.
     carrier: vtext.com
     first_name: xxxxx
