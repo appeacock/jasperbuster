@@ -81,7 +81,7 @@ Create the Jasper profile
     $ cd ~
 
 # Install Phonetisaurus, m2m-aligner and MITLM
-To use the Pocketsphinx STT engine, you also need to install MIT Language Modeling Toolkit, m2m-aligner and Phonetisaurus (and thus OpenFST)
+## To use the Pocketsphinx STT engine, you also need to install MIT Language Modeling Toolkit, m2m-aligner and Phonetisaurus (and thus OpenFST)
     $ wget http://distfiles.macports.org/openfst/openfst-1.3.4.tar.gz
     $ wget https://github.com/mitlm/mitlm/releases/download/v0.4.1/mitlm_0.4.1.tar.gz
     $ wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/m2m-aligner/m2m-aligner-1.2.tar.gz
