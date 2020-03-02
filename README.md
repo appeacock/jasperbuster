@@ -12,7 +12,7 @@ This tutorial (with special thanks to Steve Keukes who provided the original dra
 * Speaker system (with 3.5mm jack) for playback
 
 # Jasper on Raspian Buster Software Installation Guide
-This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using the Raspian Buster Lite ISO (https://sourceforge.net/projects/jasperclient/files/2020-02-13-raspbian-buster-lite.zip/download). This tutorial used a USB microphone and speakers that plug into the audio jack and uses pocketsphinx for the speech to text and festival for text to speech. This method is fairly secure in that there is no traffic sent to 3rd parties.
+This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using the Raspian Buster Lite ISO (https://sourceforge.net/projects/jasperclient/files/2020-02-13-raspbian-buster-lite.zip). This tutorial used a USB microphone and speakers that plug into the audio jack and uses pocketsphinx for the speech to text and festival for text to speech. This method is fairly secure in that there is no traffic sent to 3rd parties.
 
 
 # Burn image onto SD Card
@@ -87,8 +87,8 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ sudo apt-get install -y subversion autoconf libtool automake gfortran g++
 
 # Install CMUSphinx
-    $ svn co https://svn.code.sf.net/p/cmusphinx/code/trunk/cmuclmtk/
-    $ cd cmuclmtk/
+    $ wget https://master.dl.sourceforge.net/project/jasperclient/cmuclmtk.zip
+    $ unzip cmuclmtk.zip && cd cmuclmtk/
     $ ./autogen.sh
     $ make
     $ sudo make install
