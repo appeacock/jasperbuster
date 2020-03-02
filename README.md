@@ -162,12 +162,10 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     EOF
 
 # Reboot
-    $ sudo shutdown -r now
+    $ sudo reboot
 
 # Start Jasper
     $ cd jasper
     $ ./jasper.py
 
 # Itsa done
-
-Original tutorial created by: Steve Kuekes
