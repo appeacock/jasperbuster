@@ -144,13 +144,14 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ sudo apt-get install festival festvox-don
 
 # Final edits the Jasper profile.yml
+### The use of Facebook and Gmail credentials are optional if email access or Facebook integration is desired
     $ cat > .jasper/profile.yml<<EOF
-    carrier: vtext.com
+    carrier: carriername
     first_name: firstname
     gmail_address: emailaddress
-    gmail_password: emailpasswoprd
+    gmail_password: emailpassword
     last_name: xxxxx
-    phone_number: '1111111111'
+    phone_number: '1234567890'
     prefers_email: false
     stt_engine: sphinx
     timezone: America/Los_Angeles
