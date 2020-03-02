@@ -136,12 +136,9 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 # Download and build the Phonetisaurus FST model
     $ wget https://master.dl.sourceforge.net/project/jasperclient/g014b2b.tgz
-    $ tar -xvf g014b2b.tgz
-    $ cd g014b2b/
+    $ tar -xvf g014b2b.tgz && mv ~/g014b2b ~/phonetisaurus && cd phonetisaurus
     $ ./compile-fst.sh
     $ cd ..
-    #Rename the folder for convenience
-    $ mv ~/g014b2b ~/phonetisaurus
 
 # Install Festival for TTS
     $ sudo apt-get install festival festvox-don
