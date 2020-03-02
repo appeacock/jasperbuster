@@ -144,14 +144,11 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ sudo apt-get install festival festvox-don
 
 # Final edits the Jasper profile.yml
-    $ cd .jasper
-    $ vi profile.yml
-    
-### Update the profile as shown. X's and 1's represent private user-specific information. It could already be set.
+    $ cat > .jasper/profile.yml<<EOF
     carrier: vtext.com
-    first_name: xxxxx
-    gmail_address: xxxx@gmail.com
-    gmail_password: xxxx
+    first_name: firstname
+    gmail_address: emailaddress
+    gmail_password: emailpasswoprd
     last_name: xxxxx
     phone_number: '1111111111'
     prefers_email: false
@@ -161,6 +158,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
         hmm_dir: '/usr/share/pocketsphinx/model/en-us/en-us'
         fst_model: '../phonetisaurus/g014b2b.fst'
     tts_engine: festival-tts
+    EOF
 
 # Reboot
     $ sudo shutdown -r now
