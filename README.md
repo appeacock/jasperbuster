@@ -14,7 +14,7 @@ Plug in the microphone and speakers then restart the Pi.
 # Update and install some utilities
     $ sudo apt-get -y update
     $ sudo apt-get -y upgrade
-    $ sudo apt-get install -y git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
+    $ sudo apt-get install -y vim git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
     $ sudo apt-get install -y python-setuptools
     $ sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
 
@@ -23,8 +23,13 @@ Plug in the microphone and speakers then restart the Pi.
     #Loads USB audio before the internal soundcard
     options snd_usb_audio index=0
     options snd_bcm2835
-    #Makes sure the sound cards are ordered the correct way in ALSA
-    options snd slots=snd_usb_audio,snd_bcm2835
+    #snd_bcm2835 = built-in audio jack
+    #snd_usb_audio = USB-connected audio device
+    #This example defaults to use the built-in audio jack first
+    #Makes sure the sound cards are listed as desired in ALSA
+    #Verify order (and what ALSA sees) by entering "alsamixer" at the command line
+    #If a device is not listed, reboot the device and try again.
+    options snd slots=snd_bcm2835,snd_usb_audio
     EOF
     $ sudo shutdown -r now
 
