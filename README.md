@@ -73,11 +73,11 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ cd jasper && patch -p1 < ../jasper.patch
     $ cd ..
 
-Install needed Python libraries
+####Install needed Python libraries
     $ sudo pip install --upgrade setuptools
     $ sudo pip install -r jasper/client/requirements.txt        #### this takes a while
 
-Create the Jasper profile
+####Create the Jasper profile
     $ cd ~/jasper/client
     $ python populate.py
     $ cd ~
