@@ -67,8 +67,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     EOF
     $ source .bashrc
 
-### The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017.
-### This tutorial uses a forked repo:
+### The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017. This tutorial uses a forked repo:
     $ git clone https://github.com/aplawson/jasper-client.git jasper
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/jasper.patch
     $ cd jasper
