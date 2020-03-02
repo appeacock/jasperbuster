@@ -100,7 +100,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ wget https://master.dl.sourceforge.net/project/jasperclient/mitlm_0.4.1.tar.gz
     $ wget https://master.dl.sourceforge.net/project/jasperclient/m2m-aligner-1.2.tar.gz
     $ wget https://master.dl.sourceforge.net/project/jasperclient/is2013-conversion.tgz
-    $ ls
+    $ tar -xvf m2m-aligner-1.2.tar.gz
     $ tar -xvf openfst-1.3.4.tar.gz
     $ tar -xvf is2013-conversion.tgz
     $ tar -xvf mitlm_0.4.1.tar.gz
