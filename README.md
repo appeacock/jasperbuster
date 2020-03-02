@@ -41,7 +41,7 @@ Plug in the microphone and speakers then restart the Pi.
     #If a device is not listed, reboot the device and try again.
     options snd slots=snd_usb_audio,snd_bcm2835,
     EOF
-    $ sudo shutdown -r now
+    $ sudo reboot
 
 # Test the microphone and speakers:
 Note: This tutorial mentions `alsamixer` as a handy tool to test playback and microphone gain/volume. However, if certain aspects of alsamixer don't work quite right (i.e. F4 Capture), feel free to troubleshoot but don't add software binaries not mentioned in this guide unless you know what you're doing. * Remember this tool is a matter convenience - not a requirement.
