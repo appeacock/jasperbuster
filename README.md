@@ -44,6 +44,7 @@ Plug in the microphone and speakers then restart the Pi.
     $ sudo shutdown -r now
 
 # Test the microphone and speakers:
+Note: This tutorial mentions `alsamixer` as a handy tool to test playback and microphone gain/volume. However, if certain aspects of alsamixer don't work quite right (i.e. F4 Capture), feel free but remember this tool is a matter convenience - not a requirement.
 * To start alsamixer: `$ alsamixer`
 * Press `F6` to select microphone
 * Press `F4` to capture
