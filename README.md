@@ -88,7 +88,8 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 # Install CMUSphinx
     $ wget https://master.dl.sourceforge.net/project/jasperclient/cmuclmtk.zip
-    $ unzip cmuclmtk.zip && cd cmuclmtk/
+    $ unzip cmuclmtk.zip && chmod 777 -R cmuclmtk && cd cmuclmtk/
+    $ sudo apt install -y dos2unix && find . -type f -exec dos2unix -k -s -o {} ';'
     $ ./autogen.sh
     $ make
     $ sudo make install
