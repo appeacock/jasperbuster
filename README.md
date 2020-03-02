@@ -60,7 +60,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 #### Edit and source `.bashrc`:
     $ touch .bashrc && cat>>.bashrc<<EOF
-    LD_LIBRARY_PATH="/usr/local/lib""
+    LD_LIBRARY_PATH="/usr/local/lib"
     export LD_LIBRARY_PATH
     PATH=$PATH:/usr/local/lib/
     export PATH
