@@ -82,9 +82,9 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ python populate.py
     $ cd ~
 
-# Install PocketSphinx and the utilities we will need
-    $ sudo apt-get install pocketsphinx python-pocketsphinx pocketsphinx-en-us
-    $ sudo apt-get install subversion autoconf libtool automake gfortran g++
+# Install PocketSphinx and some necessary utilities
+    $ sudo apt-get install -y pocketsphinx python-pocketsphinx pocketsphinx-en-us
+    $ sudo apt-get install -y subversion autoconf libtool automake gfortran g++
 
 # Install CMUSphinx
     $ svn co https://svn.code.sf.net/p/cmusphinx/code/trunk/cmuclmtk/
@@ -95,7 +95,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ cd ~
 
 # Install Phonetisaurus, m2m-aligner and MITLM
-## To use the Pocketsphinx STT engine, you also need to install MIT Language Modeling Toolkit, m2m-aligner and Phonetisaurus (and thus OpenFST)
+## MIT Language Modeling Toolkit, m2m-aligner, Phonetisaurus and OpenFST are needed for the Pocketsphinx STT engine
     $ wget http://distfiles.macports.org/openfst/openfst-1.3.4.tar.gz
     $ wget https://github.com/mitlm/mitlm/releases/download/v0.4.1/mitlm_0.4.1.tar.gz
     $ wget https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/m2m-aligner/m2m-aligner-1.2.tar.gz
@@ -106,11 +106,12 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ tar -xvf mitlm_0.4.1.tar.gz
 
 # Patch and build OpenFST.
-    $ wget http://www.kuekes.com/openfst.patch
+    $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/openfst.patch
     $ cd openfst-1.3.4/
     $ patch -p 1 < ../openfst.patch
     $ sudo ./configure --enable-compact-fsts --enable-const-fsts --enable-far --enable-lookahead-fsts --enable-pdt
-    $ sudo make install # come back after a really long time *** you will get a bunch of gcc warnings, but it is ok, let them go
+    #Next step takes very long time. There might be some gcc warnings -- just ignore
+    $ sudo make install
     $ cd ~
 
 # Build m2m-aligner
