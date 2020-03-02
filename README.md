@@ -1,13 +1,13 @@
 # Overview
 Jasper is an opensource project designed to make the process of creating a self-standing "Alexis"-style assistant. Because the project hasn't seen any new commits since 2017, it's a pretty tough project to get working for experienced engineers and few have ever successfully completed the task. But the value of a standalone voice assistant that does not interact with 3rd parties is important. Thus this tutorial. 
 
-This tutorial (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The tutorial should work if the user can be trusted to type commands /as written/ with no additional creativity added. Every repository and binary file smaller than 25MB has been safely forked and stored in GitHub. Anything larger than 25MB has been stored in a dedicated SourceForge project (sourceforge.net/projects/jasperclient).
+This tutorial (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The tutorial should work if the user can be trusted to type commands /as written/ with no additional creativity added. Every repository and binary file smaller than 25MB has been safely forked and stored in GitHub. Anything larger than 25MB has been stored in a dedicated SourceForge project (https://www.sourceforge.net/projects/jasperclient).
 
 # Hardware Used in this Tutorial (tutorial -reportedly- works on a Model 4 as well)
-* Raspberry Pi 3 B+ (amazon.com/gp/product/B07BDR5PDW)
-* CanaKit Raspberry Pi 3 B+ (B Plus) with Premium Clear Case and 2.5A Power Supply (amazon.com/gp/product/B00MARDJZ4)
-* Edimax EW-7811Un 150Mbps 11n Wi-Fi USB Adapter (amazon.com/gp/product/B003MTTJOY)
-* Samsung 32GB 95MB/s (U1) microSDHC EVO Select Memory Card (amazon.com/gp/product/B06XWN9Q99)
+* Raspberry Pi 3 B+ (https://www.amazon.com/gp/product/B07BDR5PDW)
+* CanaKit Raspberry Pi 3 B+ (B Plus) with Premium Clear Case and 2.5A Power Supply (https://www.amazon.com/gp/product/B00MARDJZ4)
+* Edimax EW-7811Un 150Mbps 11n Wi-Fi USB Adapter (https://www.amazon.com/gp/product/B003MTTJOY)
+* Samsung 32GB 95MB/s (U1) microSDHC EVO Select Memory Card (https://www.amazon.com/gp/product/B06XWN9Q99)
 * Conference Microphone, OmniDirectional Dual Capsules, USB Mic (https://www.amazon.com/gp/product/B07LC3FT5B)
 * Speaker system (with 3.5mm jack) for playback
 
