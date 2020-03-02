@@ -84,12 +84,11 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 # Install PocketSphinx and some necessary utilities
     $ sudo apt-get install -y pocketsphinx python-pocketsphinx pocketsphinx-en-us
-    $ sudo apt-get install -y subversion autoconf libtool automake gfortran g++
+    $ sudo apt-get install -y subversion autoconf libtool automake gfortran g++ dos2unix
 
 # Install CMUSphinx
     $ wget https://master.dl.sourceforge.net/project/jasperclient/cmuclmtk.zip
-    $ unzip cmuclmtk.zip && chmod 777 -R cmuclmtk && cd cmuclmtk/
-    $ sudo apt install -y dos2unix && find . -type f -exec dos2unix -k -s -o {} ';'
+    $ unzip cmuclmtk.zip && chmod 777 -R cmuclmtk && cd cmuclmtk/ && find . -type f -exec dos2unix -k -s -o {} ';'
     $ ./autogen.sh
     $ make
     $ sudo make install
