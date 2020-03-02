@@ -19,7 +19,7 @@ Plug in the microphone and speakers then restart the Pi.
     $ sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
 
 # Create/edit ALSA configuration file:
-    $ sudo touch /lib/modprobe.d/jasper.conf && sudo cat > /lib/modprobe.d/jasper.conf<<EOF
+    $ sudo touch /lib/modprobe.d/jasper.conf &&  sudo chown pi /lib/modprobe.d/jasper.conf && sudo cat > /lib/modprobe.d/jasper.conf<<EOF
     #Loads USB audio before the internal soundcard
     options snd_usb_audio index=0
     options snd_bcm2835
