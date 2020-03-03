@@ -107,8 +107,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 # Patch and build OpenFST.
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/openfst.patch
-    $ cd openfst-1.3.4/
-    $ patch -p 1 < ../openfst.patch
+    $ cd openfst-1.3.4 && patch -p 1 < ../openfst.patch
     $ sudo ./configure --enable-compact-fsts --enable-const-fsts --enable-far --enable-lookahead-fsts --enable-pdt
     #Next step takes very long time. There might be some gcc warnings -- just ignore
     $ sudo make install
