@@ -1,7 +1,7 @@
 # Overview
 Jasper is an opensource project designed to make the process of creating a self-standing "Alexis"-style assistant. Because the project hasn't seen any new commits since 2017, it's a pretty tough project to get working for experienced engineers and few have ever successfully completed the task. But the value of a standalone voice assistant that does not interact with 3rd parties is important. Thus this tutorial. 
 
-This tutorial (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The tutorial should work if the user can be trusted to type commands /as written/ with no additional creativity added. Every repository and binary file smaller than 25MB has been safely forked and stored in GitHub. Anything larger than 25MB has been stored in a dedicated SourceForge project (https://sourceforge.net/projects/jasperclient/files/).
+This tutorial (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The tutorial should work if the user can be trusted to type commands /as written/ with no additional creativity added. Every repository used by this guide has been safely forked and linked within GitHub. All files used have been stored in an accompanying SourceForge project owned by the author of this guide (Adam Peacock) (https://sourceforge.net/projects/jasperclient/files/).
 
 # Hardware Used in this Tutorial (tutorial -reportedly- works on a Model 4 as well)
 * Raspberry Pi 3 B+ (https://www.amazon.com/gp/product/B07BDR5PDW)
@@ -71,7 +71,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ git clone https://github.com/aplawson/jasper-client.git jasper
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/jasper.patch
     $ cd jasper && patch -p1 < ../jasper.patch
-    $ cd ..
+    $ cd
 
 #### Install needed Python libraries
     $ sudo pip install --upgrade setuptools
@@ -80,7 +80,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 #### Create the Jasper profile
     $ cd ~/jasper/client
     $ python populate.py
-    $ cd ~
+    $ cd
 
 # Install PocketSphinx and some necessary utilities
     $ sudo apt-get install -y pocketsphinx python-pocketsphinx pocketsphinx-en-us
@@ -92,7 +92,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ ./autogen.sh
     $ make
     $ sudo make install
-    $ cd ~
+    $ cd
 
 # Install Phonetisaurus, m2m-aligner and MITLM
 ## MIT Language Modeling Toolkit, m2m-aligner, Phonetisaurus and OpenFST are needed for the Pocketsphinx STT engine
@@ -111,23 +111,23 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ sudo ./configure --enable-compact-fsts --enable-const-fsts --enable-far --enable-lookahead-fsts --enable-pdt
     #Next step takes very long time. There might be some gcc warnings -- just ignore
     $ sudo make install
-    $ cd ~
+    $ cd
 
 # Build m2m-aligner
     $ cd m2m-aligner-1.2/
     $ sudo make
-    $ cd ~
+    $ cd
 
 # Build mitlm
     $ cd mitlm-0.4.1/
     $ sudo ./configure
     $ sudo make install
-    $ cd ~
+    $ cd
 
 # Build Phonetisaurus
     $ cd is2013-conversion/phonetisaurus/src
     $ sudo make
-    $ cd ~
+    $ cd
 
 # Move some files around
     $ sudo cp ~/m2m-aligner-1.2/m2m-aligner /usr/local/bin/m2m-aligner
@@ -137,7 +137,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ wget https://master.dl.sourceforge.net/project/jasperclient/g014b2b.tgz
     $ tar -xvf g014b2b.tgz && mv ~/g014b2b ~/phonetisaurus && cd phonetisaurus
     $ ./compile-fst.sh
-    $ cd ..
+    $ cd
 
 # Install Festival for TTS
     $ sudo apt-get install festival festvox-don
@@ -167,4 +167,4 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ cd jasper
     $ ./jasper.py
 
-# Itsa done
+# done
