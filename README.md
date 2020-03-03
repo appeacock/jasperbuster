@@ -39,7 +39,8 @@ Plug in the microphone and speakers then restart the Pi.
     #Makes sure the sound cards are listed as desired in ALSA
     #Verify order (and what ALSA sees) by entering "alsamixer" at the command line
     #If a device is not listed, reboot the device and try again.
-    options snd slots=snd_usb_audio,snd_bcm2835,
+    #options snd slots=<capture_device>,<playback_device>
+    options snd slots=snd_usb_audio,snd_bcm2835
     EOF
     $ sudo reboot
 
