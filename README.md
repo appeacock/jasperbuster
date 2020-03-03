@@ -1,7 +1,7 @@
 # Overview
 Jasper is an opensource project designed to make the process of creating a self-standing "Alexis"-style assistant. Because the project hasn't seen any new commits since 2017, it's a pretty tough project to get working for experienced engineers and few have ever successfully completed the task. But the value of a standalone voice assistant that does not interact with 3rd parties is important. Thus this tutorial. 
 
-This tutorial (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The tutorial should work if the user can be trusted to type commands /as written/ with no additional creativity added. Every repository used by this guide has been safely forked and linked within GitHub. All files used have been stored in an accompanying SourceForge project owned by the author of this guide (Adam Peacock) (https://sourceforge.net/projects/jasperclient/files/).
+This tutorial (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The tutorial should work if the user can be trusted to type commands /as written/ with no additional creativity added. Every repository used by this guide has been safely forked and linked within GitHub. All files used have been stored in an accompanying SourceForge project owned by the author of this guide (Adam Peacock) at https://sourceforge.net/projects/jasperclient/files/.
 
 # Hardware Used in this Tutorial (tutorial -reportedly- works on a Model 4 as well)
 * Raspberry Pi 3 B+ (https://www.amazon.com/gp/product/B07BDR5PDW)
