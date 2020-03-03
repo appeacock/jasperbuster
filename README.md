@@ -25,7 +25,7 @@ Plug in the microphone and speakers then restart the Pi.
 # Update and install some utilities
     $ sudo apt-get -y update
     $ sudo apt-get -y upgrade
-    $ sudo apt-get install -y vim git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio
+    $ sudo apt-get install -y vim git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio dos2unix
     $ sudo apt-get install -y python-setuptools
     $ sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
 
@@ -85,7 +85,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 # Install PocketSphinx and some necessary utilities
     $ sudo apt-get install -y pocketsphinx python-pocketsphinx pocketsphinx-en-us
-    $ sudo apt-get install -y subversion autoconf libtool automake gfortran g++ dos2unix
+    $ sudo apt-get install -y subversion autoconf libtool automake gfortran g++
 
 # Install CMUSphinx
     $ wget https://master.dl.sourceforge.net/project/jasperclient/cmuclmtk.zip
