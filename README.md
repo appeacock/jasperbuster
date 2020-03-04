@@ -174,7 +174,6 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ cd jasper
     $ ./jasper.py
 
-#### END OF GUIDE
 
 # PACKAGE DETAILS
 
