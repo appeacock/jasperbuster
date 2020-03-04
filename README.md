@@ -21,21 +21,21 @@ This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using t
 # Feeling Lazy?
 A fully-functional Jasper installation was burned to an IMG file that works on any RPI 3B+ (possibly other models but they haven't been tested). The file can downloaded directly at https://sourceforge.net/projects/jasperclient/files/jasper-rpi.zip/download and written to an SD-card using any image burning software (i.e. Etcher). The username and password were not changed from the Raspbian defaults. (Username: `pi` Password: `raspberry`)
 
-# Burn image onto SD Card
+# Installation Guide
 Boot the Raspian image on the RPi device and sign in.
 Use `raspi-config` to enable the network adapter or wireless as needed and enable SSH to make thigns easier.
 Plug in the microphone and speakers then restart the Pi.
 
     $ ssh pi@<ip-address>
 
-# Update and install some utilities
+## Update and install some utilities
     $ sudo apt-get -y update
     $ sudo apt-get -y upgrade
     $ sudo apt-get install -y vim git-core python-dev bison libasound2-dev libportaudio-dev python-pyaudio dos2unix
     $ sudo apt-get install -y python-setuptools
     $ sudo python /usr/lib/python2.7/dist-packages/easy_install.py pip
 
-# Create/edit ALSA configuration file:
+## Create/edit ALSA configuration file:
     $ sudo touch /lib/modprobe.d/jasper.conf &&  sudo chown pi /lib/modprobe.d/jasper.conf && sudo cat > /lib/modprobe.d/jasper.conf<<EOF
     #Loads USB audio before the internal soundcard
     options snd_usb_audio index=0
@@ -50,7 +50,7 @@ Plug in the microphone and speakers then restart the Pi.
     EOF
     $ sudo reboot
 
-# Test the microphone and speakers:
+## Test the microphone and speakers:
 Note: This tutorial mentions `alsamixer` as a handy tool to test playback and microphone gain/volume. However, if certain aspects of alsamixer don't work quite right (i.e. F4 Capture), feel free to troubleshoot but don't add software binaries not mentioned in this guide unless you know what you're doing. * Remember this tool is a matter convenience - not a requirement.
 * To start alsamixer: `$ alsamixer`
 * Press `F6` to select microphone
@@ -59,13 +59,11 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 * To record: `$ arecord test.wav`, speak into the microphone, end recording: `Ctrl + C`
 * To playback: `$ aplay -D hw:1,0 test.wav`
 
-#### Edit and source `.bash_profile`:
+## Edit & source profile scripts:
     $ touch .bash_profile && cat>>.bash_profile<<EOF
     export LD_LIBRARY_PATH="/usr/local/lib"
     EOF
     $ source .bash_profile
-
-#### Edit and source `.bashrc`:
     $ touch .bashrc && cat>>.bashrc<<EOF
     LD_LIBRARY_PATH="/usr/local/lib"
     export LD_LIBRARY_PATH
@@ -74,26 +72,26 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     EOF
     $ source .bashrc
 
-### The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017. This tutorial uses a forked repo:
+## The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017. This tutorial uses a forked repo:
     $ git clone https://github.com/aplawson/jasper-client.git jasper
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/jasper.patch
     $ cd jasper && patch -p1 < ../jasper.patch
     $ cd
 
-#### Install needed Python libraries
+### Install needed Python libraries
     $ sudo pip install --upgrade setuptools
     $ sudo pip install -r jasper/client/requirements.txt        #### this takes a while
 
-#### Create the Jasper profile
+### Create the Jasper profile
     $ cd ~/jasper/client
     $ python populate.py
     $ cd
 
-# Install PocketSphinx and some necessary utilities
+## Install PocketSphinx and some necessary utilities
     $ sudo apt-get install -y pocketsphinx python-pocketsphinx pocketsphinx-en-us
     $ sudo apt-get install -y subversion autoconf libtool automake gfortran g++
 
-# Install CMUSphinx
+## Install CMUSphinx
     $ wget https://master.dl.sourceforge.net/project/jasperclient/cmuclmtk.zip
     $ unzip cmuclmtk.zip && chmod 777 -R cmuclmtk && cd cmuclmtk/ && find . -type f -exec dos2unix -k -s -o {} ';'
     $ ./autogen.sh
@@ -101,8 +99,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ sudo make install
     $ cd
 
-# Install Phonetisaurus, m2m-aligner and MITLM
-## MIT Language Modeling Toolkit, m2m-aligner, Phonetisaurus and OpenFST are needed for the Pocketsphinx STT engine
+## Install Phonetisaurus, m2m-aligner and MITLM and OpenFST (needed for the Pocketsphinx STT engine)
     $ wget https://master.dl.sourceforge.net/project/jasperclient/openfst-1.3.4.tar.gz
     $ wget https://master.dl.sourceforge.net/project/jasperclient/mitlm_0.4.1.tar.gz
     $ wget https://master.dl.sourceforge.net/project/jasperclient/m2m-aligner-1.2.tar.gz
@@ -112,7 +109,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ tar -xvf is2013-conversion.tgz
     $ tar -xvf mitlm_0.4.1.tar.gz
 
-# Patch and build OpenFST.
+### Patch and build OpenFST.
     $ wget https://raw.githubusercontent.com/aplawson/jasperbuster/master/openfst.patch
     $ cd openfst-1.3.4 && patch -p 1 < ../openfst.patch
     $ sudo ./configure --enable-compact-fsts --enable-const-fsts --enable-far --enable-lookahead-fsts --enable-pdt
@@ -120,37 +117,37 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ sudo make install
     $ cd
 
-# Build m2m-aligner
+### Build m2m-aligner
     $ cd m2m-aligner-1.2/
     $ sudo make
     $ cd
 
-# Build mitlm
+### Build mitlm
     $ cd mitlm-0.4.1/
     $ sudo ./configure
     $ sudo make install
     $ cd
 
-# Build Phonetisaurus
+### Build Phonetisaurus
     $ cd is2013-conversion/phonetisaurus/src
     $ sudo make
     $ cd
 
-# Move some files around
+## Move some files around
     $ sudo cp ~/m2m-aligner-1.2/m2m-aligner /usr/local/bin/m2m-aligner
     $ sudo cp ~/is2013-conversion/bin/phonetisaurus-g2p /usr/local/bin/phonetisaurus-g2p
 
-# Download and build the Phonetisaurus FST model
+## Download and build the Phonetisaurus FST model
     $ wget https://master.dl.sourceforge.net/project/jasperclient/g014b2b.tgz
     $ tar -xvf g014b2b.tgz && mv ~/g014b2b ~/phonetisaurus && cd phonetisaurus
     $ ./compile-fst.sh
     $ cd
 
-# Install Festival for TTS
+## Install Festival for TTS
     $ sudo apt-get install -y festival festvox-don
 
-# Final edits the Jasper profile.yml
-### The use of Facebook and Gmail credentials are optional if email access or Facebook integration is desired
+## Final edits the Jasper profile.yml
+*The use of Facebook and Gmail credentials are optional if email access or Facebook integration is desired*
     $ cat > .jasper/profile.yml<<EOF
     carrier: carriername
     first_name: first-name
@@ -167,13 +164,12 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     tts_engine: festival-tts
     EOF
 
-# Reboot
+## Reboot
     $ sudo reboot
 
-# Start Jasper
+## Start Jasper
     $ cd jasper
     $ ./jasper.py
-
 
 # PACKAGE DETAILS
 
