@@ -3,7 +3,7 @@ Jasper is an opensource project designed to make the process of creating a self-
 
 This guide (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The guide should work if the user can be trusted to type commands *as written* with no additional creativity added. Every repository used by this guide has been safely forked and linked within GitHub. All files used have been stored in an accompanying SourceForge project owned by the author of this guide (Adam Peacock) at https://sourceforge.net/projects/jasperclient/files/.
 
-Work is underway to convert Jasper to Python 3 - the progress of which can be monitored [HERE](github.com/aplawson/jasper-client/tree/jasper-client-python3)
+#### Work is underway to convert Jasper to Python 3 - the progress of which can be monitored [HERE](github.com/aplawson/jasper-client/tree/jasper-client-python3)
 
 #### Package details are listed [HERE](#package-details)
 
