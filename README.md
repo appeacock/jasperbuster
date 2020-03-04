@@ -15,7 +15,7 @@ This guide (with special thanks to Steve Keukes who provided the original draft)
 This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using the Raspian Buster Lite ISO (https://sourceforge.net/projects/jasperclient/files/2020-02-13-raspbian-buster-lite.zip). The file can be downloaded from the public repo but to emnsure the file versions do not change, the IMG file was moved to SourcerForge to ensure the version of the initial OS is known/tested. This tutorial used a USB microphone and speakers that plug into the audio jack and uses PocketSphinx for the speech-to-text (STT) and Festival for text-to-speech (TTS). This method is fairly secure in that there is no traffic sent to 3rd parties.
 
 # Feeling Lazy?
-A fully-functional Jasper installation was burned to an IMG file that works on any RPI 3B+ (possibly other models but they haven't been tested). The file can downloaded directly at https://sourceforge.net/projects/jasperclient/files/jasper-rpi.zip/download and written to an SD-card using any image burning software (i.e. Etcher).
+A fully-functional Jasper installation was burned to an IMG file that works on any RPI 3B+ (possibly other models but they haven't been tested). The file can downloaded directly at https://sourceforge.net/projects/jasperclient/files/jasper-rpi.zip/download and written to an SD-card using any image burning software (i.e. Etcher). The username and password wewre not changed from the defaults (Username: `pi` Password: `raspberry`)
 
 # Burn image onto SD Card
 Boot the Raspian image on the RPi device and sign in.
