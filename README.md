@@ -197,4 +197,4 @@ Temporarily required for install/compiling process:
 Required for Jasper to function (post-install):
 
 `python-dev` To install python-development tools used by Jasper.
-> WARNING: The Jasper project is written in Python 2 which is officially EOL (end-of-life) effective JAN-1-2020. The viability of this guide is dependent on the eventual migration from Python 2 to Python 3. Work is underway to convert to Python 3 - the progress of which can be monitored in the Github `github.com/aplawson/jasper-client/tree/jasper-client-python3` branch.
+> WARNING: The Jasper project is written in Python 2 which is officially EOL (end-of-life) effective JAN-1-2020. The viability of this guide is dependent on the eventual migration from Python 2 to Python 3. Work is underway to convert to Python 3 - the progress of which can be monitored in the [`jasper-client-python3`](github.com/aplawson/jasper-client/tree/jasper-client-python3) branch.
