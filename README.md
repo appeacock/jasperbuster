@@ -176,24 +176,25 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 # PACKAGE DETAILS
 
-## Temporarily required for install/compiling process:
-vim
+Temporarily required for install/compiling process:
+
+`vim`
 * To edit files manually if needed
 
-git-core
+`git-core`
 * To clone repositories
 
-dos2unix
+`dos2unix`
 * To remove non-UNIX characters from some files that break functionality. Not needed after script is cleaned up
 
-g++
+`g++`
 * To compile packages from source
 
-python-setuptools/pip
+`python-setuptools/pip`
 * To install python 2.7 modules
 
-automake
+`automake`
 * To assist with make/compile process(es)
 
-autoconf
+`autoconf`
 * To assist with make/compile process(es)
