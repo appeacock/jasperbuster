@@ -178,7 +178,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 Temporarily required for install/compiling process:
 
-``vim`` To edit files manually if needed
+`vim` To edit files manually if needed
 
 `git-core` To clone repositories
 
@@ -191,3 +191,9 @@ Temporarily required for install/compiling process:
 `automake` To assist with make/compile process(es)
 
 `autoconf` To assist with make/compile process(es)
+
+Required for Jasper to function (post-install):
+
+`python-dev` To install python-development tools used by Jasper.
+`          ` WARNING: The Jasper project is written in Python 2.7 which is deprecated.
+`          ` The viability of this guide is dependent on the eventual migration from Python 2 to Python 3.
