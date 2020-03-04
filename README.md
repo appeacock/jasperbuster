@@ -141,16 +141,16 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ cd
 
 # Install Festival for TTS
-    $ sudo apt-get install festival festvox-don
+    $ sudo apt-get install -y festival festvox-don
 
 # Final edits the Jasper profile.yml
 ### The use of Facebook and Gmail credentials are optional if email access or Facebook integration is desired
     $ cat > .jasper/profile.yml<<EOF
     carrier: carriername
-    first_name: firstname
+    first_name: first-name
     gmail_address: emailaddress
     gmail_password: emailpassword
-    last_name: xxxxx
+    last_name: last-name
     phone_number: '1234567890'
     prefers_email: false
     stt_engine: sphinx
