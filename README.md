@@ -78,11 +78,11 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ cd jasper && patch -p1 < ../jasper.patch
     $ cd
 
-### Install needed Python libraries
+## Install needed Python libraries
     $ sudo pip install --upgrade setuptools
     $ sudo pip install -r jasper/client/requirements.txt        #### this takes a while
 
-### Create the Jasper profile
+## Create the Jasper profile
     $ cd ~/jasper/client
     $ python populate.py
     $ cd
@@ -99,7 +99,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ sudo make install
     $ cd
 
-## Install Phonetisaurus, m2m-aligner and MITLM and OpenFST (needed for the Pocketsphinx STT engine)
+## Download and untar Phonetisaurus, m2m-aligner and MITLM and OpenFST (needed for the Pocketsphinx STT engine)
     $ wget https://master.dl.sourceforge.net/project/jasperclient/openfst-1.3.4.tar.gz
     $ wget https://master.dl.sourceforge.net/project/jasperclient/mitlm_0.4.1.tar.gz
     $ wget https://master.dl.sourceforge.net/project/jasperclient/m2m-aligner-1.2.tar.gz
