@@ -178,7 +178,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 Temporarily required for install/compiling process:
 
-:vim: To edit files manually if needed
+``vim`` To edit files manually if needed
 
 `git-core` To clone repositories
 
