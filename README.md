@@ -22,7 +22,7 @@ Boot the Raspian image on the RPi device and sign in.
 Use `raspi-config` to enable the network adapter or wireless as needed and enable SSH to make thigns easier.
 Plug in the microphone and speakers then restart the Pi.
 
-    $ ssh pi@<ip-address> # replace this address with the address of your Pi
+    $ ssh pi@<ip-address>
 
 # Update and install some utilities
     $ sudo apt-get -y update
