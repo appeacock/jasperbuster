@@ -1,7 +1,7 @@
 # Overview
-Jasper is an opensource project designed to make the process of creating a self-standing "Alexis"-style assistant. Because the project hasn't seen any new commits since 2017, it's a pretty tough project to get working for experienced engineers and few have ever successfully completed the task. But the value of a standalone voice assistant that does not interact with 3rd parties is important. Thus this tutorial. 
+Jasper is an opensource project designed to make the process of creating a self-standing "Alexis"-style assistant. Because the project hasn't seen any new commits since 2017, it's a pretty tough project to get working for experienced engineers and few have ever successfully completed the task. But the value of a standalone voice assistant that does not interact with 3rd parties is important. Thus the creation of this DIY (do it yourself) guide. 
 
-This tutorial (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The tutorial should work if the user can be trusted to type commands /as written/ with no additional creativity added. Every repository used by this guide has been safely forked and linked within GitHub. All files used have been stored in an accompanying SourceForge project owned by the author of this guide (Adam Peacock) at https://sourceforge.net/projects/jasperclient/files/.
+This guide (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The guide should work if the user can be trusted to type commands *as written* with no additional creativity added. Every repository used by this guide has been safely forked and linked within GitHub. All files used have been stored in an accompanying SourceForge project owned by the author of this guide (Adam Peacock) at https://sourceforge.net/projects/jasperclient/files/.
 
 # Hardware Used in this Tutorial (tutorial -reportedly- works on a Model 4 as well)
 * Raspberry Pi 3 B+ (https://www.amazon.com/gp/product/B07BDR5PDW)
@@ -12,8 +12,10 @@ This tutorial (with special thanks to Steve Keukes who provided the original dra
 * Speaker system (with 3.5mm jack) for playback
 
 # Jasper on Raspian Buster Software Installation Guide
-This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using the Raspian Buster Lite ISO (https://sourceforge.net/projects/jasperclient/files/2020-02-13-raspbian-buster-lite.zip). This tutorial used a USB microphone and speakers that plug into the audio jack and uses pocketsphinx for the speech to text and festival for text to speech. This method is fairly secure in that there is no traffic sent to 3rd parties.
+This install process was tested on a Raspberry Pi Model 3 B+ and Model 4 using the Raspian Buster Lite ISO (https://sourceforge.net/projects/jasperclient/files/2020-02-13-raspbian-buster-lite.zip). The file can be downloaded from the public repo but to emnsure the file versions do not change, the IMG file was moved to SourcerForge to ensure the version of the initial OS is known/tested. This tutorial used a USB microphone and speakers that plug into the audio jack and uses PocketSphinx for the speech-to-text (STT) and Festival for text-to-speech (TTS). This method is fairly secure in that there is no traffic sent to 3rd parties.
 
+# Feeling Lazy?
+A fully-functional Jasper installation was burned to an IMG file that works on any RPI 3B+ (possiblyu other models but they haven't been tested). You can download it directly from https://sourceforge.net/projects/jasperclient/files/jasper-rpi.zip/download and you can burn it directly to your SD card using any imaging software (i.e. Balena Etcher).
 
 # Burn image onto SD Card
 Boot the Raspian image on the RPi device and sign in.
