@@ -3,6 +3,8 @@ Jasper is an opensource project designed to make the process of creating a self-
 
 This guide (with special thanks to Steve Keukes who provided the original draft) steps through the process of building a fully-functional Jasper installation on a Raspberry Pi. The guide should work if the user can be trusted to type commands *as written* with no additional creativity added. Every repository used by this guide has been safely forked and linked within GitHub. All files used have been stored in an accompanying SourceForge project owned by the author of this guide (Adam Peacock) at https://sourceforge.net/projects/jasperclient/files/.
 
+## Package details are listed at end of README.
+
 # Hardware Used in this Tutorial (tutorial -reportedly- works on a Model 4 as well)
 * Raspberry Pi 3 B+ (https://www.amazon.com/gp/product/B07BDR5PDW)
 * CanaKit Raspberry Pi 3 B+ (B Plus) with Premium Clear Case and 2.5A Power Supply (https://www.amazon.com/gp/product/B00MARDJZ4)
@@ -171,3 +173,21 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ ./jasper.py
 
 # done
+
+# PACKAGE DETAILS
+
+## Temporarily required for install/compiling process:
+vim
+* To edit files manually if needed
+git-core
+* To clone repositories
+dos2unix
+* To remove non-UNIX characters from some files that break functionality. Not needed after script is cleaned up
+g++
+* To compile packages from source
+python-setuptools/pip
+* To install python 2.7 modules
+automake
+* To assist with make/compile process(es)
+autoconf
+* To assist with make/compile process(es)
