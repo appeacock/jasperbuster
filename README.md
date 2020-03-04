@@ -195,4 +195,4 @@ Temporarily required for install/compiling process:
 Required for Jasper to function (post-install):
 
 `python-dev` To install python-development tools used by Jasper.
-             > WARNING: The Jasper project is written in Python 2.7 which is deprecated. The viability of this guide is dependent on the eventual migration from Python 2 to Python 3.
+> WARNING: The Jasper project is written in Python 2.7 which is deprecated. The viability of this guide is dependent on the eventual migration from Python 2 to Python 3.
