@@ -172,7 +172,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     $ cd jasper
     $ ./jasper.py
 
-# done
+#### END OF GUIDE
 
 # PACKAGE DETAILS
 
