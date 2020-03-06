@@ -148,6 +148,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 ## Final edits the Jasper profile.yml
 *The use of Facebook and Gmail credentials are optional if email access or Facebook integration is desired*
+
     $ cat > .jasper/profile.yml<<EOF
     carrier: carriername
     first_name: first-name
