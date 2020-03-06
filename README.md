@@ -61,13 +61,13 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
 
 ## Edit & source profile scripts:
     $ touch .bash_profile && cat>>.bash_profile<<EOF
-    export LD_LIBRARY_PATH="/usr/local/lib"
+    export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib:/usr/local/lib/fst"
     EOF
     $ source .bash_profile
     $ touch .bashrc && cat>>.bashrc<<EOF
-    LD_LIBRARY_PATH="/usr/local/lib"
+    LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib:/usr/local/lib/fst"
     export LD_LIBRARY_PATH
-    PATH=$PATH:/usr/local/lib/
+    PATH=$PATH:/usr/local/lib:/usr/local/lib/fst
     export PATH
     EOF
     $ source .bashrc
