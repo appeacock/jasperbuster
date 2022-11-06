@@ -138,7 +138,7 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     sudo cp ~/is2013-conversion/bin/phonetisaurus-g2p /usr/local/bin/phonetisaurus-g2p
 
 ## Download and build the Phonetisaurus FST model
-    wget https://master.dl.sourceforge.net/project/jasperclient/g014b2b.tgz
+    wget --no-check-certificate https://master.dl.sourceforge.net/project/jasperclient/g014b2b.tgz
     tar -xvf g014b2b.tgz && mv ~/g014b2b ~/phonetisaurus && cd phonetisaurus
     ./compile-fst.sh
     cd
