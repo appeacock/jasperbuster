@@ -63,14 +63,14 @@ Note: This tutorial mentions `alsamixer` as a handy tool to test playback and mi
     touch .bash_profile && cat>>.bash_profile<<EOF
     export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib:/usr/local/lib/fst"
     EOF
-    $ source .bash_profile
-    $ touch .bashrc && cat>>.bashrc<<EOF
+    source .bash_profile
+    touch .bashrc && cat>>.bashrc<<EOF
     LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/usr/local/lib:/usr/local/lib/fst"
     export LD_LIBRARY_PATH
     PATH=$PATH:/usr/local/lib:/usr/local/lib/fst
     export PATH
     EOF
-    $ source .bashrc
+    source .bashrc
 
 ## The authoritative repo for jasper is at https://github.com/jasperproject/jasper-client.git but it hasn't been updated since 2017. This tutorial uses a forked repo:
     git clone https://github.com/aplawson/jasper-client.git jasper
